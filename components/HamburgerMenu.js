@@ -18,7 +18,7 @@ function HamburgerMenu() {
       </div>
 
       <Drawer
-            ModalProps={{disableAutoFocus:true, disableScrollLock:true}}
+            ModalProps={{disableAutoFocus:true, disableScrollLock:true,disablePortal:true,keepMounted:true}}
             anchor="left"
             open={opneMenu}
             onClose={()=> setOpneMenu( false )}
