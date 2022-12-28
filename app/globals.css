@@ -186,6 +186,10 @@ main .categories-container .category-card .category-title{
   color: var(--monami-color-4);
 }
 
+.hamburger-menu-container{
+  z-index: 5000;
+}
+
 .hamburger.is-active:hover, .hamburger:hover {
   opacity: .7;
 }
