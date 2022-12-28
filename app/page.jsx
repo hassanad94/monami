@@ -25,8 +25,6 @@ export default async function Home() {
 
   const data = await getSanityData();
 
-  console.log( data );
-
   const{ categories } = data
 
   return (
