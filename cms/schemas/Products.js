@@ -12,6 +12,15 @@ export default {
         ]
       },
       {
+        title: 'Termék Kategóriája',
+        name: 'category',
+        type: 'reference',
+        to: [{type: 'productCategories'}],
+        validation: Rule => [
+          Rule.required().error('Lady Monami Kérem rakja be egy kategorába.')
+        ]
+      },
+      {
         name: "images",
         title: "Képek",
         type: "array",

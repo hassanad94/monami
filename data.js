@@ -3,11 +3,14 @@ import { IoLogoInstagram } from "react-icons/io";
 
 export const navData = {
   items: [
-    { href: "/", name: "Fő oldal" },
-    { href: "/arak", name: "Árak" },
+    { href: "/", name: "Főoldal" },
     { href: "/rolam", name: "Rólam" },
-    { href: "/galeria", name: "Galéria" },
+    { href: "/termekek", name: "Termékek" },
+    // { href: "/galeria", name: "Galéria" },
     { href: "/kapcsolat", name: "Kapcsolat" },
+    { href: "/aszf", name: "ÁSZF" },
+    { href: "/adatvedelem", name: "AdatVédelem" },
+    { href: "/szallitas", name: "Szállítás" },
   ],
 };
 export const logo = "/img/logo/logo.jpg";

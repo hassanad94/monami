@@ -1,11 +1,53 @@
-import { Inter } from '@next/font/google'
+import CategoryCards from "../components/CategoryCards";
+import GiftCard from "../components/GiftCard";
+import {client} from "../utils/client";
+import { urlForImage } from "../utils/client";
 
-const inter = Inter({ subsets: ['latin'] })
+const getSanityData = async() =>{
 
-export default function Home() {
+  let categories = await client.fetch( `*[_type == 'productCategories']{
+    _id, preview, name
+  }` );
+
+  // categories.preview = urlForImage( categories.preview ).url();
+
+  for (let category of categories) {
+    category.preview = urlForImage( category.preview ).width(500).url();
+  }
+
+  return {
+    categories
+  }
+
+}
+
+export default async function Home() {
+
+  const data = await getSanityData();
+
+  console.log( data );
+
+  const{ categories } = data
+
   return (
-    <main >
-      Monami Shop
+    <main>
+     
+      <div className="content">
+
+        <div className="categories-container">
+
+          <CategoryCards categories={categories} />
+
+        </div>
+
+      </div>
+
+      <div className="content ">
+
+        <GiftCard />
+
+      </div>
+
     </main>
   )
 }
