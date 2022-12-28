@@ -70,10 +70,10 @@ a {
 }
 
 .menu-modal > .MuiModal-backdrop{
-  top: inherit;
+  top: var(--navbar-height);
 }
 .menu-modal > .MuiPaper-root{
-  top: inherit;
+  top: var(--navbar-height);
 }
 
 nav a.active{
